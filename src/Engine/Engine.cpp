@@ -158,12 +158,12 @@ void getWords(HWND view, const UserSettings& settings, chunk_info& chunk)
 				const char l = line[i];
 				charType newType = getCharType(l);
 
-				if (newType == word.type)
-				{
-					++word.length;
-					word.hash = HASH(word.hash, l);
-				}
-				else
+				// if (newType == word.type)
+				// {
+					// ++word.length;
+					// word.hash = HASH(word.hash, l);
+				// }
+				// else
 				{
 					if (!settings.IgnoreSpaces || word.type != charType::SPACECHAR)
 						chunk.words.push_back(word);
